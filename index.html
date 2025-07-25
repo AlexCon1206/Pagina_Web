@@ -3,14 +3,48 @@
   <meta charset="UTF-8">
   <title>Consejos de Juventud</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Animaciones personalizadas */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .slide-up {
+      transform: translateY(40px);
+      opacity: 0;
+      animation: slideUp 1s 0.5s forwards;
+    }
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .btn-glow {
+      box-shadow: 0 0 16px 2px #fb7185;
+      transition: box-shadow 0.3s;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 32px 8px #f43f5e;
+      transform: scale(1.07);
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
-  <div class="max-w-4xl mx-auto text-center bg-white shadow-2xl rounded-2xl p-12 transform hover:scale-105 transition-all duration-300">
-      <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 mb-6">
+  <div class="max-w-4xl mx-auto text-center bg-white shadow-2xl rounded-2xl p-12 fade-in">
+      <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 mb-6 slide-up">
           ¿SABÍAS QUÉ? 🔥
       </h1>
       
-      <div class="text-2xl font-bold text-gray-800 leading-relaxed mb-8">
+      <div class="text-2xl font-bold text-gray-800 leading-relaxed mb-8 slide-up">
           <p class="mb-4">
               En Colombia, <span class="text-blue-600">CADA JOVEN ENTRE 14 Y 28 AÑOS</span> tiene el PODER de transformar su comunidad a través de los Consejos de Juventud.
           </p>
@@ -19,22 +53,24 @@
               ¡Tu voz NO es solo un grito, ES UN DERECHO POLÍTICO REAL! 
           </p>
           
-          <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6 rounded-xl shadow fade-in">
               <strong>Dato Impactante:</strong> Más del 50% de la población colombiana tiene menos de 30 años. 
               <span class="text-sm block mt-2">¿Imaginas el CAMBIO que podemos generar?</span>
           </div>
           
-          <div class="text-xl font-semibold text-green-700">
+          <div class="text-xl font-semibold text-green-700 fade-in">
               🗳️ PARTICIPAR ES:
               <ul class="list-disc list-inside text-left mx-auto w-3/4 mt-2">
-                  <li>Construir tu futuro</li>
-                  <li>Defender tus derechos</li>
-                  <li>Transformar tu territorio</li>
+                  <li class="mb-1">Construir tu futuro</li>
+                  <li class="mb-1">Defender tus derechos</li>
+                  <li class="mb-1">Transformar tu territorio</li>
               </ul>
           </div>
       </div>
       
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScL3sK8yAckgNVB_E30tYQI8WR6r2HsIPU90Nij6GjCgIUrhg/viewform?usp=header" class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-full text-2xl hover:shadow-xl transition-all hover:scale-110">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScL3sK8yAckgNVB_E30tYQI8WR6r2HsIPU90Nij6GjCgIUrhg/viewform?usp=header"
+       class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold text-xl px-8 py-4 rounded-full mt-6 btn-glow transition-all duration-300 animate-bounce"
+       target="_blank">
         ¡PARTICIPA AHORA!
       </a>
   </div>
